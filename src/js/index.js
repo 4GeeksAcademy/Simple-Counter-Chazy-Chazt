@@ -9,4 +9,9 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let contador = 0;
+setInterval(()=>{
+    ReactDOM.render(<Home contador={contador} />, document.querySelector("#app"));
+contador+=1;
+
+},500)
